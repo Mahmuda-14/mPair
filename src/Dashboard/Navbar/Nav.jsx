@@ -12,24 +12,41 @@ const Nav = () => {
   // }
   return (
     <div>
-      
-
-      <nav className="bg-[#2C2C2C]">
+      <nav className=" bg-white">
         <div className=" max-w-auto  ml-36 px-8">
           <div className="relative flex  h-16 items-center justify-between">
             <div className="">
               <a
                 href="#"
-                className="text-white rounded-md px-3 py-2 text-md font-bold"
+                className="text-[#4163E9] rounded-md px-3 py-2 text-md font-bold"
                 aria-current="page"
               >
-                Hi, Caro!
+                Overview
               </a>
+            </div>
+
+            <div>
+              <label className="input input-bordered flex items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    className="h-4 w-4 opacity-70"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <input type="text" placeholder="Search" />
+                </div>
+              </label>
             </div>
 
             <div className="flex items-center space-x-4">
               <button
-              
                 type="button"
                 className=" rounded-full p-1 -ml-[258px]  text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
@@ -52,12 +69,17 @@ const Nav = () => {
               <div className="">
                 <button
                   type="button"
-                  className="flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="flex items-center rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
-                  <img className="h-8 w-8 rounded-full" src={profile} alt="" />
+                  <img
+                    className="h-8 w-8 rounded-full"
+                    src={profile}
+                    alt="Profile Picture"
+                  />
+                  <span className="ml-2 text-gray-700">Alexa Calen</span>
                 </button>
               </div>
             </div>

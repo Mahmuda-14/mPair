@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import "react-toastify/dist/ReactToastify.css";
 // import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 // import { AuthContext } from "../../provider/AuthProvider";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-1.png";
 import { useState } from "react";
 
 const Login = () => {

@@ -3,38 +3,50 @@ import file2 from "../../../../public/Rectangle 93.png";
 import file3 from "../../../../public/Frame 2.png";
 import "./home.css";
 import { IoMdAdd } from "react-icons/io";
+import { RxDotFilled } from "react-icons/rx";
 const DashHome = () => {
   return (
     <>
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-row mx-7 gap-6 justify-between">
-          <div className="card text-white w-1/3 h-48 bg-[#2C2C2C] shadow-xl">
+      <div className="flex flex-col gap-8 ">
+        <div className="flex flex-row mx-7 gap-6 justify-between ">
+          <div className="card text-white w-1/3 h-52 bg-gradient-to-r from-[#4163E9] to-[#BDC9F5] shadow-xl flex flex-col justify-between ">
             <div className="card-body flex flex-row">
-              <div className="w-[50%]">
-                <h2 className="card-title text-[#5BFFA7]">Samstag</h2>
-                <h2 className="card-title text-white text-3xl font-bold">2</h2>
-                <h2 className="card-title22 notititle top-6 -left-3 notification text-[#5BFFA7]">
-                  Creator Event <br />
-                  18:30-23:00
+              <div>
+                <h2 className="top-6 -left-3 text-xl text-white">
+                  Foundations of User Experience (UX) Design
                 </h2>
+                <div className="flex flex-row mt-2">
+                  <h2 className="text-sm">4 Assignments</h2>
+                  <RxDotFilled />
+                  <h2 className="text-sm">20 Videos</h2>
+                </div>
               </div>
-              <div className="w-[50%]">
-                <h2 className="card-title text-[#858585]">Morgen</h2>
-                <h2 className="card-title22 notititle top-2  notification22 text-[#5BFFA7]">
-                  All hands <br />
-                  10:00
-                </h2>
-                <h2 className="card-title22 notititle top-4 notification22 text-[#5BFFA7]">
-                  Call Marie <br />
-                  14:00
-                </h2>
+              <div className="w-[50%] flex items-center justify-center mb-9">
+                <div
+                  className="radial-progress bg-[#BDC9F5] text-blue-900 border-blue-900"
+                  style={{
+                    "--value": 80,
+                    backgroundColor: "white",
+                    borderBlockColor: "blue",
+                  }}
+                  role="progressbar"
+                >
+                  70%
+                </div>
               </div>
             </div>
+
+            <div className="flex items-center justify-center -mt-28 ">
+              <button className="btn px-10 mb-2 rounded-3xl">
+                Continue Course
+              </button>
+            </div>
           </div>
-          <div className="card w-1/3 h-48 bg-[#2C2C2C] shadow-xl">
+
+          {/* <div className="card w-1/3 h-48 bg-[#2C2C2C] shadow-xl">
             <div className="card-body gap-0">
               <h2 className="card-title text-white text-2xl">To Do</h2>
-             
+
               <div className="flex">
                 <label className="label cursor-pointer">
                   <input
@@ -78,109 +90,164 @@ const DashHome = () => {
                 <IoMdAdd></IoMdAdd>
               </button>
             </div>
-          </div>
-          <div class="card w-1/3 h-48 bg-[#2C2C2C] shadow-xl">
-           
-          </div>
-        </div>
-        <div className="flex flex-row justify-evenly mx-7 gap-3 ">
-          <div className="w-3/4">
-            <div className="card w-full h-[14rem] mb-10 bg-[#2C2C2C] shadow-xl">
-              <div className="card-body grid grid-cols-7 mx-10 justify-around">
-                <div>
-                  <img src={file} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file2} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file2} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-                <div>
-                  <img src={file} className=" w-16" alt="" />
-                  <h5 className="text-white text-sm font-bold">
-                    <span className="text-sm">Ordner</span> <br />
-                    <span className="text-xs">Objekt</span>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div className="card w-full h-[313px] bg-[#2C2C2C] shadow-xl ">
-              <div className="card-body">
-                <div className="indicator">
-                  <span className="indicator-item badge badge-secondary"></span>
-                  <div className="grid w-[856px] h-[89px] bg-[#5BFFA726] rounded-xl place-items-center">
-                    content
-                  </div>
-                </div>
-              </div>
-              <div className="card-body">
-                <div className="indicator">
-                  <div className="grid w-[856px]   bg-base-300 place-items-center">
-                    content
-                  </div>
-                </div>
-              </div>
-              <div className="card-body">
-                <div className="indicator">
-                  <div className="grid w-[856px]  bg-base-300 place-items-center">
-                    content
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/4 h-[578px]">
-            <div className="card w-full h-full bg-[#2C2C2C] shadow-xl">
-              <div className="card-body">
-                <img src={file3} alt="" />
-              </div>
-            </div>
-          </div>
+          </div> */}
+
+          {/* <div class="card w-1/3 h-48 bg-[#2C2C2C] shadow-xl"></div> */}
         </div>
 
-        <div className="mx-7 mb-5">
-          <input
-            type="text"
-            placeholder="Suche nach Personen, Dokumenten, ..."
-            name=""
-            id=""
-            className=" w-full  bg-[#2C2C2C] h-[38px] text-[#A3A3A3] input input-bordered"
-          />
+        <div className="flex flex-col mx-7 gap-6 justify-between ">
+          <div className="card text-black w-1/3 h-52 bg-[#F7F7FF] shadow-xl flex flex-col justify-between ">
+            <div className="card-body flex flex-row">
+              <div>
+                <h2
+                  className="top-6 -left-3 text-xl text-black
+"
+                >
+                  Start the UX Design Process: Empathize, Define, and Ideate
+                </h2>
+                <div className="flex flex-row mt-2">
+                  <h2 className="text-sm">4 Assignments</h2>
+                  <RxDotFilled />
+                  <h2 className="text-sm">20 Videos</h2>
+                </div>
+              </div>
+              <div className="w-[50%] flex items-center justify-center mb-9">
+                <div
+                  className="radial-progress bg-[#BDC9F5] text-blue-900 border-blue-900"
+                  style={{
+                    "--value": 80,
+                    backgroundColor: "white",
+                    borderBlockColor: "blue",
+                  }}
+                  role="progressbar"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center -mt-28 ">
+              <button className="btn px-10 mb-2 rounded-3xl  bg-gradient-to-r from-[#4163E9] to-[#BDC9F5]">
+                Continue Course
+              </button>
+            </div>
+          </div>
+
+
+         <div className="card text-black w-1/3 h-52 bg-[#F7F7FF] shadow-xl flex flex-col justify-between ">
+            <div className="card-body flex flex-row">
+              <div>
+                <h2
+                  className="top-6 -left-3 text-xl text-black
+"
+                >
+                  Start the UX Design Process: Empathize, Define, and Ideate
+                </h2>
+                <div className="flex flex-row mt-2">
+                  <h2 className="text-sm">4 Assignments</h2>
+                  <RxDotFilled />
+                  <h2 className="text-sm">20 Videos</h2>
+                </div>
+              </div>
+              <div className="w-[50%] flex items-center justify-center mb-9">
+                <div
+                  className="radial-progress bg-[#BDC9F5] text-blue-900 border-blue-900"
+                  style={{
+                    "--value": 80,
+                    backgroundColor: "white",
+                    borderBlockColor: "blue",
+                  }}
+                  role="progressbar"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center -mt-28 ">
+              <button className="btn px-10 mb-2 rounded-3xl  bg-gradient-to-r from-[#4163E9] to-[#BDC9F5]">
+                Continue Course
+              </button>
+            </div>
+          </div>
+
+
+         <div className="card text-black w-1/3 h-52 bg-[#F7F7FF] shadow-xl flex flex-col justify-between ">
+            <div className="card-body flex flex-row">
+              <div>
+                <h2
+                  className="top-6 -left-3 text-xl text-black
+"
+                >
+                  Start the UX Design Process: Empathize, Define, and Ideate
+                </h2>
+                <div className="flex flex-row mt-2">
+                  <h2 className="text-sm">4 Assignments</h2>
+                  <RxDotFilled />
+                  <h2 className="text-sm">20 Videos</h2>
+                </div>
+              </div>
+              <div className="w-[50%] flex items-center justify-center mb-9">
+                <div
+                  className="radial-progress bg-[#BDC9F5] text-blue-900 border-blue-900"
+                  style={{
+                    "--value": 80,
+                    backgroundColor: "white",
+                    borderBlockColor: "blue",
+                  }}
+                  role="progressbar"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center -mt-28 ">
+              <button className="btn px-10 mb-2 rounded-3xl  bg-gradient-to-r from-[#4163E9] to-[#BDC9F5]">
+                Continue Course
+              </button>
+            </div>
+          </div>
+
+
+        <div className="card text-black w-1/3 h-52 bg-[#F7F7FF] shadow-xl flex flex-col justify-between ">
+            <div className="card-body flex flex-row">
+              <div>
+                <h2
+                  className="top-6 -left-3 text-xl text-black
+"
+                >
+                  Start the UX Design Process: Empathize, Define, and Ideate
+                </h2>
+                <div className="flex flex-row mt-2">
+                  <h2 className="text-sm">4 Assignments</h2>
+                  <RxDotFilled />
+                  <h2 className="text-sm">20 Videos</h2>
+                </div>
+              </div>
+              <div className="w-[50%] flex items-center justify-center mb-9">
+                <div
+                  className="radial-progress bg-[#BDC9F5] text-blue-900 border-blue-900"
+                  style={{
+                    "--value": 80,
+                    backgroundColor: "white",
+                    borderBlockColor: "blue",
+                  }}
+                  role="progressbar"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center -mt-28 ">
+              <button className="btn px-10 mb-2 rounded-3xl  bg-gradient-to-r from-[#4163E9] to-[#BDC9F5]">
+                Continue Course
+              </button>
+            </div>
+          </div>
         </div>
+       
       </div>
     </>
   );
