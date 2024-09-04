@@ -1,12 +1,12 @@
-// import { Outlet } from "react-router-dom";
-import Login from "../Authentication/Login";
 
+import Login from "../Authentication/Login";
 
 const Home = () => {
     return (
-        <div>
-           
-            {/* <Login></Login> */}
+        <div className="relative">
+        
+            <Login></Login>
+            
         </div>
     );
 };

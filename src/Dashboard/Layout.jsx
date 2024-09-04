@@ -1,72 +1,75 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-
-import { FaMapMarked } from "react-icons/fa";
-
-import { IoHome } from "react-icons/io5";
-import { RiApps2Fill } from "react-icons/ri";
-import { FaHeart } from "react-icons/fa";
-import Nav from "./Navbar/Nav";
-import logo from "../../public/logo-1.png";
+import { FaRegEdit } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";
+import Nav from "./Navbar/Nav";
+import { GrHomeRounded } from "react-icons/gr";
+import { PiVideoCameraBold } from "react-icons/pi";
+
 const Layout = () => {
   return (
-    <div className="relative bg-white h-screen overflow-x-hidden">
-      <div className="fixed  left-[113px] w-[100%]">
-        <Nav></Nav>
+    <div className="bg-white h-screen overflow-x-hidden">
+      {/* Position the Nav component absolutely */}
+      <div className="absolute top-0 left-0 w-full z-10">
+        <Nav />
       </div>
-      <div className="flex bg-white h-screen bg-fixed">
-        <div className="fixed left-0 top-0 h-full w-64 rounded-r-[2rem] border-r-4 bg-gradient-to-t from-[#F7F7FF] to-[#F7F7FF] overflow-y-auto">
-          {/* <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
-                    <hr /> */}
-          <div className="px-6 ml-4 py-4">
-            <img className=" w-36 h-10" src={logo} alt="Your Company" />
-          </div>
-          <ul className="menu px-6 text-[#6C72FF] text-lg gap-4">
-            <li className="">
-              <Link to="/dashboard/home">
-              <RiApps2Fill />
-               Overview
-              </Link>
-            </li>
-            <li>
-              <NavLink to="/dashboard/space">
-                <RiApps2Fill /> My Course
-              </NavLink>
-            </li>
 
+      <div className="flex pt-16">
+        {" "}
+        {/* Adjust pt (padding-top) to accommodate the height of the nav */}
+        {/* Sidebar */}
+        <div className="fixed left-0 top-16 h-full w-64 bg-[#E4F2F8] overflow-y-auto z-0">
+          <div className="px-6 ml-4 py-4">
+            <h2 className="text-[#2397C8] text-2xl font-semibold py-2">
+              Accounting
+            </h2>
+          </div>
+          <ul className="menu px-6 text-[#373232] text-lg gap-4">
             <li>
-              <NavLink to="/dashboard/health">
-                <FaHeart />
-               Completed
+              <NavLink
+                to="/dashboard/home"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#2397C8] font-bold"
+                    : "text-[#373232]"
+                }
+              >
+                <GrHomeRounded />
+                Dashboard
               </NavLink>
             </li>
             <li>
-              <Link to="/dashboard/channel">
-                <AiFillNotification /> Financial Aid
-              </Link>
+              <NavLink
+                to="/dashboard/account"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#2397C8] font-bold"
+                    : "text-[#373232]"
+                }
+              >
+                <PiVideoCameraBold />
+                Accounting
+              </NavLink>
             </li>
             <li>
-              <Link to="/dashboard/channel">
-                <AiFillNotification /> Transactions
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/channel">
-                <AiFillNotification /> Reports
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/channel">
-                <AiFillNotification /> Statistics
-              </Link>
+              <NavLink
+                to="/dashboard/report"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#2397C8] font-bold"
+                    : "text-[#373232]"
+                }
+              >
+                <FaRegEdit />
+                Reports
+              </NavLink>
             </li>
           </ul>
         </div>
-
-        <div className="flex-1 ml-64 mt-20">
+        {/* Main Content */}
+        <div className="flex-1 ml-64 mt-10">
+          {" "}
+          {/* Adjust ml (margin-left) to make space for the sidebar */}
           <Outlet />
-
-          {/*  */}
         </div>
       </div>
     </div>

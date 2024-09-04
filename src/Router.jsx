@@ -4,9 +4,12 @@ import Home from "./Components/Home";
 import Login from "./Authentication/Login";
 import Layout from "./Dashboard/Layout";
 import DashHome from "./Dashboard/Components/Home/DashHome";
-import Channel from "./Dashboard/Components/Channel/Channel";
-import Space from "./Dashboard/Components/Space/Space";
-import Health from "./Dashboard/Components/Health/Health";
+import Health from "./Dashboard/Components/Report/Report";
+import Register from "./Authentication/Register";
+import Account from "./Dashboard/Components/Account/Account";
+import Profile from "./Dashboard/Profile/Profile";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -14,35 +17,58 @@ export const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: "/",
-        element: <Layout></Layout>,
+        path: '/',
+        element: <Home></Home>
       },
-    ],
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+
+    ]
   },
 
   {
     path: "dashboard",
     element: <Layout></Layout>,
     children: [
+
+
       {
         path: "home",
-        element: <DashHome></DashHome>,
+        element: <DashHome></DashHome>
+        // element: <Dash2></Dash2>
       },
+  
+
       {
-        path: "channel",
-        // element: <Channel></Channel>,
+        path: "account",
+        element: <Account></Account>
+
       },
 
       {
-        path: "space",
-        // element: <Space></Space>,
-      },
+        path: "report",
+        element: <Health></Health>
+        
 
-      {
-        path: "health",
-        // element: <Health></Health>,
       },
-     
-    ],
+      {
+        path: "profile",
+        element: <Profile></Profile>
+        
+
+      },
+    
+
+
+
+
+    ]
   },
+  
 ]);
