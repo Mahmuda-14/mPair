@@ -7,7 +7,7 @@ const Account = () => {
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
-    setIsOpen(false); // Close the dropdown after selection
+    setIsOpen(false);
   };
 
   const toggleDropdown = () => {
@@ -63,17 +63,20 @@ const Account = () => {
 
             <select className="select select-info rounded-none w-full max-w-xs">
               <option disabled selected>
-              Choose Head
+                Choose Head
               </option>
               <option>Muna</option>
               <option>Mitu</option>
               <option>Nur</option>
             </select>
             <label className="input input-bordered rounded-none flex items-center gap-2">
-              
               <input type="text" className="grow" placeholder="Amount" />
             </label>
-            <input type="button" value="Submit" className=" w-[277px] h-[41px] px-4 py-2 bg-[#2397C8] text-white" />
+            <input
+              type="button"
+              value="Submit"
+              className=" w-[277px] h-[41px] px-4 py-2 bg-[#2397C8] text-white"
+            />
           </div>
           <div className="divider lg:divider-horizontal"></div>
 
@@ -102,11 +105,64 @@ const Account = () => {
               className="w-[170px] h-[27px] p-2 bg-[#ECEDFA]"
               placeholder="Food"
             />
-            <input
+
+            {/* <input
               type="submit"
-              className="w-[170px] h-[35-px] p-4 bg-transparent text-[#2397C8]"
+              className="w-[170px] h-[35px] p-4 bg-transparent text-[#2397C8]"
               value="Add Accounts Head"
-            />
+            /> */}
+
+            <button
+              className="w-[182px] h-[50px] px-4 bg-transparent text-[#2397C8]"
+              onClick={() => document.getElementById("my_modal_1").showModal()}
+            >
+              Add Accounts Head
+            </button>
+
+            <dialog id="my_modal_1" className="modal ">
+              <div className="modal-box rounded-none  border-t-4 border-t-[#2397C8]">
+                <h3 className="font-semibold text-left text-lg p-5 text-[#9E9E9E]">
+                  Add Account Head
+                </h3>
+
+                <hr className=" text-center p-3" />
+                <div className="flex space-x-4 items-center justify-center mb-4">
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="radio-1"
+                      className="radio text-[#2397C8]"
+                      value="debit"
+                      defaultChecked
+                    />
+                    <span className="ml-2">Debit</span>
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="radio-1"
+                      className="radio"
+                      value="credit"
+                    />
+                    <span className="ml-2">Credit</span>
+                  </label>
+                </div>
+
+                <form
+                  method="dialog"
+                  className="modal-action flex flex-col gap-2 items-center space-x-2"
+                >
+                  <input
+                    type="text"
+                    placeholder="Type name here"
+                    className="input border-none rounded-sm w-full"
+                  />
+                  <button type="submit" className="btn bg-[#2397C8] justify-center text-white w-[30rem]">
+                    Add Head
+                  </button>
+                </form>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>

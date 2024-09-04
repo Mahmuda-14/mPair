@@ -1,6 +1,6 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 import { FaRegEdit } from "react-icons/fa";
-import { AiFillNotification } from "react-icons/ai";
+
 import Nav from "./Navbar/Nav";
 import { GrHomeRounded } from "react-icons/gr";
 import { PiVideoCameraBold } from "react-icons/pi";
@@ -8,15 +8,14 @@ import { PiVideoCameraBold } from "react-icons/pi";
 const Layout = () => {
   return (
     <div className="bg-white h-screen overflow-x-hidden">
-      {/* Position the Nav component absolutely */}
+   
       <div className="absolute top-0 left-0 w-full z-10">
         <Nav />
       </div>
 
       <div className="flex pt-16">
-        {" "}
-        {/* Adjust pt (padding-top) to accommodate the height of the nav */}
-        {/* Sidebar */}
+       
+       
         <div className="fixed left-0 top-16 h-full w-64 bg-[#E4F2F8] overflow-y-auto z-0">
           <div className="px-6 ml-4 py-4">
             <h2 className="text-[#2397C8] text-2xl font-semibold py-2">
@@ -65,10 +64,9 @@ const Layout = () => {
             </li>
           </ul>
         </div>
-        {/* Main Content */}
+       
         <div className="flex-1 ml-64 mt-10">
-          {" "}
-          {/* Adjust ml (margin-left) to make space for the sidebar */}
+          
           <Outlet />
         </div>
       </div>
